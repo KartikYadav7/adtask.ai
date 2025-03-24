@@ -1,5 +1,4 @@
 const transporter = require("../middleware/dataMiddleware");
-const User = require("../models/User");
 const FreeTrial = require("../models/freeTrial");
 const CallSchedule = require("../models/callSchedule");
 
