@@ -1,0 +1,176 @@
+
+.features-section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.features-header {
+  margin-bottom: 60px;
+}
+
+.features-label {
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.features-title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.features-subtitle {
+  font-size: 1rem;
+  color: #cccccc;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+
+.features-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background: linear-gradient(#1a1e2d, #1a1e2d) padding-box,
+              linear-gradient(45deg, #6f00ff, #00d8ff) border-box;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  padding: 40px 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.feature-card-title {
+  font-size: 1.3rem;
+  margin: 16px 0;
+  font-weight: 600;
+}
+
+.feature-card-text {
+  font-size: 0.95rem;
+  color: #cccccc;
+}
+
+.feature-icon-wrap {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 20px;
+  position: relative;
+  border-radius: 50%;
+  background-clip: padding-box;
+}
+
+.feature-icon-wrap::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border-radius: inherit;
+  background: linear-gradient(45deg, #6f00ff, #00d8ff);
+  z-index: -1;
+}
+
+/* Icon 1: Stylized "S" in a circle */
+.icon-audience {
+  background: #89CFF0;
+  border-radius: 50%;
+}
+
+.icon-audience::before {
+  content: "S";
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Icon 2: Gear Symbol */
+.icon-easier {
+  background: #89CFF0;
+  border-radius: 50%;
+}
+
+.icon-easier::before {
+  content: "⚙";
+  font-size: 28px;
+  color: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Icon 3: Minimalist Bar Chart */
+.icon-insights {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+.icon-insights::before,
+.icon-insights::after {
+  content: "";
+  width: 10px;
+  background: #89CFF0;
+}
+
+.icon-insights::before {
+  height: 20px;
+}
+
+.icon-insights::after {
+  height: 35px;
+}
+
+/* Third bar as a child element */
+.icon-insights div {
+  width: 10px;
+  height: 50px;
+  background: #89CFF0;
+}
+
+/* Icon 4: Lightning Bolt using clip-path */
+.icon-agents {
+  background: #89CFF0;
+  position: relative;
+  width: 40px;
+  height: 60px;
+}
+
+.icon-agents::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  width: 20px;
+  height: 40px;
+  background: #000;
+  clip-path: polygon(30% 0%, 60% 0%, 50% 50%, 80% 50%, 40% 100%);
+}
+@media (max-width:326px) {
+  .features-section
+ {
+  padding: 20px ;
+ } 
+}
