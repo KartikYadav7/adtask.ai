@@ -8,7 +8,7 @@ const BACKEND_URL = import.meta.env.VITE_BACKEND_URL
 
 const Button = ({ type, text }) => {
   return <>
-    <button type={type} className={`${className} w-full hover:bg-gray-900`}>{text}</button>
+    <button type={type} className={`${className} cursor-pointer w-full hover:bg-gray-900`}>{text}</button>
   </>
 }
 
