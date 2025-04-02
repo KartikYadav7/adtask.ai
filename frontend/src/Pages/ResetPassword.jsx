@@ -7,6 +7,7 @@ const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
 const ResetPassword = () => {
     const navigate = useNavigate();
+    const[loading,setLoading]=useState(false)
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
@@ -15,6 +16,7 @@ const ResetPassword = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setLoading(true)
         try {
             await axios.post(`${BACKEND_URL}/resetPassword`, {
                 email,
@@ -30,6 +32,8 @@ const ResetPassword = () => {
                 setError(err.response.data.message);
                 setMessage('');
             }
+        }finally{
+            setLoading(false)
         }
     };
     return (
@@ -60,7 +64,7 @@ const ResetPassword = () => {
                         />
                     </span>
                     <p className=" mb-2 h-2.5 text-sm">{error}</p>
-                    <Button type="submit"
+                    <Button type="submit" disabled={loading}
                         text="Reset Password" />
                 </form>
             </div>

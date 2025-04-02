@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import axios from 'axios'
-import { FaEye, FaEyeSlash } from 'react-icons/fa'
+import {  FaEye, FaEyeSlash } from 'react-icons/fa'
 import { Link, useNavigate } from 'react-router-dom'
 
 const className = "p-2 border border-gray-400 rounded-xl my-2 mb-4";
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL
 
-const Button = ({ type, text }) => {
+const Button = ({ type, text ,disabled }) => {
   return <>
     <button type={type} className={`${className} cursor-pointer w-full hover:bg-gray-900`}>{text}</button>
   </>
@@ -70,12 +70,14 @@ const SignUp = () => {
   const [name, setName] = useState('');
   const [error, setError] = useState('');
   const [email, setEmail] = useState('');
+  const[disabled,setDisabled] = useState(false)
   const [password, setPassword] = useState('');
   const navigate = useNavigate()
 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setDisabled(true)
     setError('');
     try {
       await axios.post(`${BACKEND_URL}/register`, {
@@ -92,6 +94,8 @@ const SignUp = () => {
       else {
         setError("Something went wrong. Please try again.");
       }
+    }finally{
+      setDisabled(false)
     }
   }
 
@@ -122,6 +126,7 @@ const SignUp = () => {
           <p className=" mb-2 h-2.5 text-sm">{error}</p>
 
           <Button type=" submit"
+          disabled={disabled}
             text="Register" />
           <p className='text-center'>Alredy have an account?</p>
           <Link to='/login'><Button type=" Button"

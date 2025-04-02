@@ -8,9 +8,11 @@ const Login = () => {
   const navigate = useNavigate();
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
+  const[disabled,setDisabled]=useState(false)
   const [error, setError] = useState("");
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setDisabled(true)
     setError("");
 
     try {
@@ -22,6 +24,9 @@ const Login = () => {
     }
     catch (error) {
       setError(error.message || "Check Creditionals");
+    }
+    finally{
+      setDisabled(false)
     }
   };
 
@@ -50,6 +55,7 @@ const Login = () => {
           <p className=" mb-2 h-2.5 text-sm">{error}</p>
 
           <Button
+          disabled={disabled}
             type="submit"
             text="Login" />
           <Link to='/resetPassword' className="text-center"> Forgot Password ?</Link>
