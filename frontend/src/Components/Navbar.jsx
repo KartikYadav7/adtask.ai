@@ -59,7 +59,7 @@ const Navbar = () => {
 
   return (
     <div className="w-3/4 mx-auto py-8">
-      <div className="flex justify-between items-center py-4  border border-gray-300 px-4 rounded-xl" >
+      <div className="flex justify-between items-center py-2 md:py-4  border border-gray-300 px-4 rounded-xl" >
         <h1 className="text-2xl font-bold cursor-pointer">adTask.ai</h1>
         
         {/* Hamburger Icon */}

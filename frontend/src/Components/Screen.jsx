@@ -23,7 +23,7 @@ const Screen = () => {
 
          <p className="text-sm my-4">Try AdTask AI free for 30 days</p>
       </div>
-      <div className="h-60 w-fit px-8 mx-auto border border-gray-600 rounded-lg mb-16 flex items-center justify-center 
+      <div className="h-60 w-fit px-4 mx-auto border border-gray-600 rounded-lg mb-16 flex items-center justify-center 
       md:h-96 md:w-1/2 md:px-0">
         <p className="text-7xl mx-auto text-gray-500 text-center justify-center content-center">
           AdTask.ai

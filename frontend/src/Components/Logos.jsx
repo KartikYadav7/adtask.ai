@@ -32,7 +32,7 @@ const Logos = () => {
 
       <p className="text-center">AdTask AI works with :</p>
 
-      <div className="w-fit flex items-center justify-between md:w-3/4 mx-auto space-x-4 my-4 ">
+      <div className="w-fit flex items-center justify-between md:w-3/4 mx-auto space-x-2 my-4 ">
         <Emoji icon={faTiktok} />
         <Emoji icon={faLinkedinIn} />
         <Emoji icon={faMeta} />
