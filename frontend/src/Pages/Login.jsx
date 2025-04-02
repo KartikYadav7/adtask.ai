@@ -30,7 +30,7 @@ const Login = () => {
 
       <div className="flex flex-col items-center justify-center  ">
         <h1 className="text-7xl my-4 font-medium">Adtask.ai</h1>
-        <form
+        <form method="POST"
           onSubmit={handleSubmit}
           className="flex flex-col w-72  p-4  border border-gray-400 rounded-xl "
         >
