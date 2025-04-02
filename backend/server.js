@@ -10,7 +10,7 @@ const app = express()
 
 app.use(express.json())
 app.use(cors({
-    origin: ['https://adtask-ai-frontend.vercel.app'],
+    origin: ['https://adtask-ai-frontend.vercel.app','http://localhost:5173',],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true
 }))
