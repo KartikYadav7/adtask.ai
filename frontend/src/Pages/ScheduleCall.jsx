@@ -77,7 +77,7 @@ const ScheduleCall = () => {
               value={formData.callDate}
               onChange={handleChange}
               required
-              className="p-2 rounded-xl my-2 mb-4 border"
+              className="p-2 w-full rounded-xl my-2 mb-4 border"
             />
             Time
             <input
@@ -86,7 +86,7 @@ const ScheduleCall = () => {
               name="callTime"
               value={formData.callTime}
               onChange={handleChange}
-              className="p-2 rounded-xl my-2 mb-4 border"
+              className="p-2 w-full  rounded-xl my-2 mb-4 border"
               required
             />
 

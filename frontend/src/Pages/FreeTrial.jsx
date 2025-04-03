@@ -45,7 +45,7 @@ const FreeTrial = () => {
         <p className="">Experience all premium features for 14 days—no credit card required.</p>
         {!submitted ? (
 
-          <form onSubmit={handleSubmit} className="space-x-4">
+          <form onSubmit={handleSubmit} className="space-x-4 space-y-4 md:space-y-4">
             <input
               type="email"
               placeholder="Enter your email"
